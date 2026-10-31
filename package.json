@@ -1,6 +1,6 @@
 {
   "name": "orkut",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Orkut server clone built with Node, PostgreSQL, Apollo, GraphQL",
   "main": "index.js",
   "scripts": {
@@ -11,23 +11,23 @@
   "author": "Gledyson Ferreira dos Santos",
   "license": "ISC",
   "dependencies": {
-    "apollo-server": "^2.15.1",
-    "bcrypt": "^5.0.0",
-    "cloudinary": "^1.22.0",
+    "@apollo/server": "^4.11.2",
+    "bcrypt": "^5.1.1",
+    "cloudinary": "^2.5.1",
     "colors": "^1.4.0",
-    "graphql": "^15.2.0",
-    "graphql-scalars": "^1.2.1",
-    "jsonwebtoken": "^8.5.1",
-    "pg": "^8.2.1",
-    "pg-hstore": "^2.3.3",
-    "sanitize-html": "^1.27.1",
-    "sequelize": "^6.3.0"
+    "dotenv": "^16.4.5",
+    "graphql": "^16.9.0",
+    "graphql-scalars": "^1.23.0",
+    "graphql-tag": "^2.12.6",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1",
+    "pg-hstore": "^2.3.4",
+    "sanitize-html": "^2.13.1",
+    "sequelize": "^6.37.5"
   },
   "devDependencies": {
-    "axios": "^0.21.1",
-    "cross-env": "^7.0.2",
-    "dotenv": "^8.2.0",
-    "nodemon": "^2.0.4",
-    "sequelize-cli": "^6.2.0"
+    "axios": "^1.7.7",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.7"
   }
 }

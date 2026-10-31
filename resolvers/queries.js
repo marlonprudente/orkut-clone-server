@@ -15,7 +15,7 @@ const {
 } = require("../models");
 const { Sequelize, Op } = require("sequelize");
 
-const { UserInputError, ApolloError } = require("apollo-server");
+const { UserInputError, ApolloError } = require("../utils/errors");
 
 module.exports = () => {
   const queries = {

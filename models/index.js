@@ -12,15 +12,17 @@ const photoModel = require("./Photo");
 const photoCommentModel = require("./PhotoComment");
 const videoModel = require("./Video");
 
-// DB Connection
-var sequelize;
+// DB Connection em models/index.js
+let sequelize;
 if (process.env.NODE_ENV === "production") {
   sequelize = new Sequelize(process.env.DATABASE_URL, {
+    dialect: process.env.DB_DIALECT || "postgres",
+    logging: false,
     dialectOptions: {
       ssl: {
+        require: true,
         rejectUnauthorized: false,
       },
-      logging: false,
     },
   });
 } else {
@@ -29,8 +31,8 @@ if (process.env.NODE_ENV === "production") {
     process.env.DB_USERNAME,
     process.env.DB_PASSWORD,
     {
-      host: "localhost",
-      dialect: process.env.DB_DIALECT,
+      host: process.env.DB_HOST || "localhost",
+      dialect: process.env.DB_DIALECT || "postgres",
       logging: false,
     }
   );

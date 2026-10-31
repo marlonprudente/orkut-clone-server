@@ -13,7 +13,7 @@ const {
   PhotoFolder,
   Video,
 } = require("../models");
-const { UserInputError, ApolloError } = require("apollo-server");
+const { UserInputError, ApolloError } = require("../utils/errors");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const sanitizeHtml = require("sanitize-html");
